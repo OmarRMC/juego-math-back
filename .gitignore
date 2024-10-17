@@ -1,0 +1,41 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# Directorios de producción local
+dist/
+build/
+public/
+out/
+tmp/
+temp/
+
+# Archivos de configuración de entorno
+.env
+.env.*.local
+
+# Archivos de logs
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Vercel (se puede manejar configuración aparte si se necesita)
+.vercel/
+
+# Dependencias opcionales que se deben generar en la máquina
+coverage/
+.idea/
+.vscode/
+
+index.html
