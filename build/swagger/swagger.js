@@ -18,7 +18,7 @@ const options = {
         servers: [
             {
                 /*url: 'http://localhost:3000',*/
-                url: 'https://juego-math-back.vercel.app/api-docs',
+                url: 'https://juego-math-back.vercel.app',
                 description: 'Server vercel'
             }
         ],

@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+import path from "path"
 import express from "express"
 
 import cors from "cors"
@@ -28,6 +29,9 @@ const app= express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
+
+app.use("/api-docs",express.static(path.join(__dirname, "public")))
+
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs, {
     swaggerOptions: {
         url: swaggerUiUrl, // Cambia esto a la URL del bundle
