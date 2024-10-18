@@ -18,12 +18,23 @@ import gameRouter from "./routes/gameRoutes"
 import connectDB from "./config/database"
 import {authMiddleware} from './middleware/AuthMid';
 
+const swaggerUiUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-bundle.js';
+const swaggerUiStandalonePresetUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-standalone-preset.js';
+//const _swaggerUiCssUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui.css';
+
+
 
 const app= express() 
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs, {
+    swaggerOptions: {
+        url: swaggerUiUrl, // Cambia esto a la URL del bundle
+        kiuri: swaggerUiStandalonePresetUrl, // Cambia esto a la URL del standalone preset
+        dom_id: '#swagger-ui',
+    },
+}));
 
 const  PORT= process.env.PORT||3000 
 connectDB(); 

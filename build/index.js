@@ -15,11 +15,20 @@ const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const gameRoutes_1 = __importDefault(require("./routes/gameRoutes"));
 const database_1 = __importDefault(require("./config/database"));
 const AuthMid_1 = require("./middleware/AuthMid");
+const swaggerUiUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-bundle.js';
+const swaggerUiStandalonePresetUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-standalone-preset.js';
+//const _swaggerUiCssUrl = 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui.css';
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
-app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_1.default));
+app.use("/api-docs", swagger_ui_express_1.default.serve, swagger_ui_express_1.default.setup(swagger_1.default, {
+    swaggerOptions: {
+        url: swaggerUiUrl, // Cambia esto a la URL del bundle
+        kiuri: swaggerUiStandalonePresetUrl, // Cambia esto a la URL del standalone preset
+        dom_id: '#swagger-ui',
+    },
+}));
 const PORT = process.env.PORT || 3000;
 (0, database_1.default)();
 app.get("/ping", (_req, res) => {
