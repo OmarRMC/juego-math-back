@@ -10,7 +10,7 @@ package-lock.json
 dist/
 src/
 #build/
-public/
+#public/
 out/
 tmp/
 temp/
