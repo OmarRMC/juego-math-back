@@ -6,6 +6,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const swagger_jsdoc_1 = __importDefault(require("swagger-jsdoc"));
 const options = {
     definition: {
+        swaggerOptions: {
+            url: 'https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-bundle.js', // Cambia la versión si es necesario
+            dom_id: '#swagger-ui',
+            layout: 'BaseLayout',
+        },
         openapi: '3.0.0',
         info: {
             title: 'Api del juego  math - backend',
