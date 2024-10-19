@@ -6,7 +6,7 @@ Este es el backend de un juego de matemáticas que permite la autenticación de 
 
 El backend del proyecto está desplegado en Vercel y puedes acceder a la API mediante la siguiente URL:
 
-[https://juego-math-back.vercel.app/](https://juego-math-back.vercel.app/)
+[https://juego-math-back.vercel.app/api-docs](https://juego-math-back.vercel.app/api-docs)
 
 ## Tecnologías Utilizadas
 
@@ -78,6 +78,10 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
    ```bash
    npm start
    ```
+7. Si deseas compilar el código compilado TypeScript con archivos staticos (Opcional):
+
+   ```bash
+   npm run build
 
 ## Scripts Disponibles
 
