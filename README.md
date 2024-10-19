@@ -78,10 +78,11 @@ Sigue estos pasos para configurar y ejecutar el proyecto localmente:
    ```bash
    npm start
    ```
-7. Si deseas compilar el código compilado TypeScript con archivos staticos (Opcional):
+7. Si deseas compilar el código  TypeScript con archivos staticos (Opcional):
 
    ```bash
    npm run build
+   ```
 
 ## Scripts Disponibles
 
