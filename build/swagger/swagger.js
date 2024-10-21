@@ -10,7 +10,14 @@ const options = {
         info: {
             title: 'Api del juego  math - backend',
             version: '1.0.0',
-            description: ' Esto es una api ',
+            description: `
+             API del Juego de Matemáticas
+              | Es el API del juego de matemáticas que permite la autenticación de usuarios,
+              | manejo de puntuaciones, niveles, historial, y más.
+              | El proyecto está desarrollado en Node.js y TypeScript,
+              | utilizando tecnologías como Express, JWT, bcrypt y MongoDB.
+              
+            `,
             contact: {
                 name: 'Omar R Mamani Capcha'
             },

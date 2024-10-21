@@ -18,23 +18,23 @@ import gameRouter from "./routes/gameRoutes"
 import connectDB from "./config/database"
 import {authMiddleware} from './middleware/AuthMid';
 
-
-
-
 const app= express() 
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-app.use("/api-docs",express.static(path.join(__dirname, "public")))
 
+app.use("/api-docs",express.static(path.join(__dirname, "public")))
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 const  PORT= process.env.PORT||3000 
 connectDB(); 
-
+/*
 app.get("/", (_req, res)=>{
     res.send({message:"welcome", info:"/api-docs"}); 
+})*/
+app.get("/",(_req, res )=>{
+    res.sendFile(path.join(__dirname, "public","main.html"))
 })
 
 app.use("/api/game", authMiddleware);
@@ -42,6 +42,7 @@ app.use("/api/game", authMiddleware);
 app.use("/api/auth", authRouter)
 
 app.use("/api/game",gameRouter)
+
 
 
 app.listen(PORT , ()=>{
