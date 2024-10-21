@@ -13,7 +13,7 @@ window.onload = function() {
     "info": {
       "title": "Api del juego  math - backend",
       "version": "1.0.0",
-      "description": " Esto es una api ",
+      "description": "\n             API del Juego de Matemáticas\n              | Es el API del juego de matemáticas que permite la autenticación de usuarios,\n              | manejo de puntuaciones, niveles, historial, y más.\n              | El proyecto está desarrollado en Node.js y TypeScript,\n              | utilizando tecnologías como Express, JWT, bcrypt y MongoDB.\n              \n            ",
       "contact": {
         "name": "Omar R Mamani Capcha"
       }
@@ -483,11 +483,7 @@ window.onload = function() {
     },
     "tags": []
   },
-  "customOptions": {
-    "url": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-bundle.js",
-    "kiuri": "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.51.0/swagger-ui-standalone-preset.js",
-    "dom_id": "#swagger-ui"
-  }
+  "customOptions": {}
 };
   url = options.swaggerUrl || url
   var urls = options.swaggerUrls
